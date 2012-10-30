@@ -1,4 +1,3 @@
-
 class Texel
 {
     PVector anchor;
@@ -6,7 +5,7 @@ class Texel
     PVector vel;
     float size;
     float spring = 0.01;
-    float damping = 0.93;
+    float damping = 0.91;
     float g = 100f;
     
     Texel(float x, float y) {
@@ -50,7 +49,7 @@ class Texel
             
             if (d > 13) {
                 // gravity
-                d = pow(d, 1.5);
+                d = pow(d, 1.3);
                 f.normalize();
                 f.mult(g/d);
                 if (d > 0) {
